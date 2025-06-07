@@ -1,0 +1,166 @@
+/* Quy tắc chung cho thẻ body */
+body {
+    font-family: Arial, sans-serif; /* Thay đổi font chữ */
+    font-size: 16px; /* Thay đổi kích thước chữ */
+    margin: 0; /* Đảm bảo không có khoảng trống mặc định */
+    line-height: 1.6; /* Thêm khoảng cách dòng mặc định cho body */
+}
+
+/* Quy tắc cho liên kết "Skip to Main Content" */
+.skip-link {
+    position: absolute;
+    top: -40px; /* Ẩn ra khỏi màn hình */
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 100;
+    text-decoration: none;
+    transition: top 0.3s ease-in-out; /* Tạo hiệu ứng trượt mượt mà */
+}
+
+.skip-link:focus {
+    top: 0; /* Hiện ra khi người dùng focus (dùng phím Tab) */
+}
+
+/* Quy tắc cho thẻ header */
+header {
+    background-color: #4CAF50; /* Thay đổi màu nền */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Quy tắc cho thẻ nav */
+nav {
+    background-color: #333; /* Thay đổi màu nền */
+    padding: 10px 0;
+    text-align: center;
+    display: inline-block; /* Thay đổi hiển thị thành inline-block */
+    width: 80%; /* Chiều rộng khoảng 80% */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Dùng flexbox để các mục nav nằm ngang */
+    justify-content: center; /* Căn giữa các mục nav */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+/* Bỏ ghi chú (comment out) style cũ cho li (ví dụ) */
+/*
+li {
+    display: block;
+    width: 100%;
+}
+*/
+
+nav li {
+    margin: 0 15px; /* Khoảng cách giữa các mục nav */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block; /* Để padding và margin hoạt động tốt hơn */
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+/* Quy tắc cho ảnh trong nav (descendent selector) */
+nav img {
+    width: 10%; /* Chiều rộng ảnh trong nav khoảng 10% */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    vertical-align: middle; /* Căn giữa theo chiều dọc với văn bản */
+}
+
+/* Quy tắc cho thẻ main */
+main {
+    background-color: #f4f4f4; /* Thay đổi màu nền */
+    font-size: 1rem; /* Thay đổi kích thước chữ (1rem = 16px mặc định) */
+    padding: 20px;
+    max-width: 1200px; /* Giới hạn chiều rộng nội dung */
+    margin: 20px auto; /* Căn giữa main trên trang */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Quy tắc cho thẻ footer */
+footer {
+    background-color: #333; /* Thay đổi màu nền */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Quy tắc cho thẻ h1 */
+h1 {
+    text-align: center; /* Căn giữa văn bản */
+    font-family: Georgia, serif; /* Thay đổi font chữ */
+    color: #333; /* Thay đổi màu sắc */
+}
+
+/* Quy tắc cho thẻ p */
+p {
+    line-height: 1.8; /* Thay đổi khoảng cách dòng */
+    margin-bottom: 1em; /* Khoảng cách dưới mỗi đoạn văn */
+}
+
+/* Quy tắc cho class .grid */
+.grid {
+    display: grid; /* Sử dụng Grid Layout */
+    grid-template-columns: 40% 40%; /* Hai cột, mỗi cột khoảng 40% */
+    gap: 20px; /* Khoảng cách giữa các ô lưới */
+    justify-content: center; /* Căn giữa các ô lưới theo chiều ngang */
+    align-items: start; /* Căn các ô theo chiều dọc từ trên xuống */
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+/* Quy tắc cho ảnh trong class .grid (descendent selector) */
+.grid img {
+    width: 100%; /* Chiều rộng ảnh 100% của ô lưới chứa nó */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+    border-radius: 5px;
+}
+
+/* Quy tắc cho class .flex */
+.flex {
+    display: flex; /* Sử dụng Flexbox Layout */
+    flex-wrap: wrap; /* Cho phép các mục xuống dòng khi không đủ chỗ */
+    justify-content: space-around; /* Phân bố các mục với khoảng cách đều quanh chúng */
+    align-items: flex-start; /* Căn các mục theo chiều dọc từ đầu */
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #d0d0d0;
+    border-radius: 8px;
+}
+
+.flex-item {
+    flex: 1 1 calc(33% - 40px); /* Kích thước cơ sở cho các mục flex, trừ đi khoảng cách */
+    max-width: 300px; /* Giới hạn chiều rộng tối đa */
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Đảm bảo padding và border được tính vào width */
+}
+
+.flex-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
